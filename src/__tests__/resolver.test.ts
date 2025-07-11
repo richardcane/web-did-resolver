@@ -1,8 +1,6 @@
-import { Resolver, DIDDocument, Resolvable } from 'did-resolver'
+import { DIDDocument, Resolvable, Resolver } from 'did-resolver'
 import { getResolver } from '../resolver'
-import fetch from 'cross-fetch'
-jest.mock('cross-fetch')
-const mockedFetch = jest.mocked(fetch)
+const mockedFetch = jest.spyOn(global, 'fetch')
 
 describe('web did resolver', () => {
   const did: string = 'did:web:example.com'

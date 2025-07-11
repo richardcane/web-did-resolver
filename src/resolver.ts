@@ -1,4 +1,3 @@
-import fetch from 'cross-fetch'
 import { DIDDocument, DIDResolutionResult, DIDResolver, ParsedDID } from 'did-resolver'
 
 const DOC_PATH = '/.well-known/did.json'
